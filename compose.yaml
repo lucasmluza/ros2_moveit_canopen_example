@@ -12,3 +12,4 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./panda_description:/home/ros2_user/ws_ros/src/panda_description
+      - ./panda_rviz_viewer:/home/ros2_user/ws_ros/src/panda_rviz_viewer
