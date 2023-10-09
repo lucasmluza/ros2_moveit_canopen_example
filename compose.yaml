@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  ros2_humble:
+    build: ./
+    image: ros2_humble
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./panda_description:/home/ros2_user/ws_ros/src/panda_description
