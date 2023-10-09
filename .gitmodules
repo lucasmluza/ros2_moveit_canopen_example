@@ -1,0 +1,4 @@
+[submodule "ros2_canopen"]
+	path = ros2_canopen
+	url = https://github.com/ros-industrial/ros2_canopen.git
+	branch = humble
