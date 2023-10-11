@@ -60,17 +60,17 @@ defaults:
       enabled: false
 
 nodes:
-  joint_1:
+  panda_joint1:
     node_id: 2
-  joint_2:
+  panda_joint2:
     node_id: 3
-  joint_3:
+  panda_joint3:
     node_id: 4
-  joint_4:
+  panda_joint4:
     node_id: 5
-  joint_5:
+  panda_joint5:
     node_id: 6
-  joint_6:
+  panda_joint6:
     node_id: 7
-  joint_7:
+  panda_joint7:
     node_id: 8
