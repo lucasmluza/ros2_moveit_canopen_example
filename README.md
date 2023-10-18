@@ -88,6 +88,7 @@ For visualize the robot and control the joints position with a GUI app:
 ```bash
 ros2 launch panda_rviz_viewer view.launch.py
 ```
+![panda_rviz_viewer](https://github.com/lucasmluza/ros2_moveit_canopen_example/assets/36889165/060c6396-9236-405c-a43e-138fda239215)
 
 ### panda_canopen
 
@@ -118,6 +119,8 @@ For visualizing the robot movement with Rviz2, in a third bash instance of the c
 ros2 launch panda_canopen rviz.launch.py
 ```
 
+![panda_canopen](https://github.com/lucasmluza/ros2_moveit_canopen_example/assets/36889165/5a4fa3e1-5a3e-4f53-afdd-d9b35f8e9242)
+
 ### panda_moveit
 
 For visualize the robot, and plan and execute trajectories using the MoveIt2 plugin in Rviz2:
@@ -125,6 +128,8 @@ For visualize the robot, and plan and execute trajectories using the MoveIt2 plu
 ```bash
 ros2 launch panda_moveit simulation.launch.py
 ```
+
+![panda_moveit](https://github.com/lucasmluza/ros2_moveit_canopen_example/assets/36889165/7e55b0e1-2355-4d9e-9a36-5d51b8c66d38)
 
 ## References
 
