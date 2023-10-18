@@ -36,7 +36,7 @@ RUN curl \
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" \
     | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-# Install ROS2 related packages
+# Install ROS2 related packages and utils packages
 # Check http://packages.ros.org/ros2/ubuntu/dists/jammy/main/ for more info about the packages
 RUN apt update \
     && apt install -y \
@@ -46,6 +46,7 @@ RUN apt update \
     ros-dev-tools \
     python3-rosdep \
     python3-colcon-common-extensions \
+    can-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Add non-root user
