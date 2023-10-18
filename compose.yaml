@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  ros2_humble:
+    build: ./
+    image: ros2_humble
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    environment:
+      DISPLAY: $DISPLAY
+    network_mode: "host"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./panda_description:/home/ros2_user/ws_ros/src/panda_description
+      - ./panda_rviz_viewer:/home/ros2_user/ws_ros/src/panda_rviz_viewer
+      - ./ros2_canopen:/home/ros2_user/ws_ros/src/ros2_canopen
+      - ./panda_canopen:/home/ros2_user/ws_ros/src/panda_canopen
+      - ./panda_moveit:/home/ros2_user/ws_ros/src/panda_moveit
