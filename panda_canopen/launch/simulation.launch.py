@@ -19,10 +19,6 @@ def launch_setup(context, *args, **kwargs):
         [FindPackageShare("canopen_fake_slaves"), "launch", "cia402_slave.launch.py"]
     )
 
-    slave_dcf = PathJoinSubstitution([
-        FindPackageShare("panda_canopen"), "config", "cia402",  "cia402_slave.eds"]
-    )
-
     bus_config = PathJoinSubstitution(
         [FindPackageShare("panda_canopen"), "config", "cia402", "bus.yml"]
     )
@@ -42,7 +38,9 @@ def launch_setup(context, *args, **kwargs):
                 launch_arguments={
                     "node_id": str(bus_config_dict[joint]["node_id"]),
                     "node_name": f"slave_node_{joint}",
-                    "slave_config": slave_dcf,
+                    "slave_config": PathJoinSubstitution([
+                         FindPackageShare("panda_canopen"), "config", "cia402", str(bus_config_dict[joint]["dcf"])
+                    ]),
                     "can_interface_name": can_interface_name,
                 }.items(),
             )
